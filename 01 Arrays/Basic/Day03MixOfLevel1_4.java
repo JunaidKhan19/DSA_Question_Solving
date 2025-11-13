@@ -119,6 +119,38 @@ public class Day03MixOfLevel1_4 {
             b++;
         }
 		
-		
+        //25 Find majority element (> n/2 occurrences).
+        //Boyer–Moore Voting Algorithm
+        int[] arr = {2, 2, 1, 2, 3, 2, 2};
+        int n2 = arr.length;
+        
+        int candidate = arr[0];
+        int count = 1;
+        
+        for (int iterate = 0; iterate < n2; iterate++) {
+        	if(arr[iterate] == candidate) {
+        		count++;
+        	} else {
+        		count--;
+        	}
+        	
+        	if(count == 0) {
+        		candidate = arr[iterate];
+        		count = 1;
+        	}
+        }
+        
+        int frequency = 0;
+        for (int num : arr) {
+        	if(num == candidate) {
+        		frequency++;
+        	}
+        }
+        
+        if (frequency > n2/2)
+            System.out.println("Majority element: " + candidate);
+        else
+            System.out.println("No majority element");
+	
     }
 }
