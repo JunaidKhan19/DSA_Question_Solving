@@ -42,6 +42,26 @@ public class Day04PrefixsumAndSubarrayBasics {
             System.out.println("No subarray with given sum found.");
         }
 
-
+	    //28 Find Minimum Subarray Sum (variation of Kadane).
+		int[] array3 = {4, -2, -3, 7, -5, 2, -1, -6, 4};
+		int start2 = 0, end = 0, sum2 = array3[0], min = array3[0], tempStart = 0;
+		for (int i = 1; i < array3.length; i++) {
+            if (array3[i] < sum + array3[i]) {
+                sum2 = array3[i];
+                tempStart = i;
+            } else {
+                sum2 = sum2 + array3[i];
+            }
+			if (min > sum2) {
+				min = sum2;
+				start2 = tempStart;
+				end = i;
+			}
+		}		
+		System.out.println("Minimum Sum = " + min);
+		System.out.print("Subarray = ");
+		for (int i = start2; i <= end; i++) {
+		    System.out.print(array3[i] + " ");
+		}
     }
 }
