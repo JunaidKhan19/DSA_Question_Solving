@@ -84,6 +84,30 @@ public class Day01ReversingAndPalindrome {
 		
 		System.out.println(reversedString);
 
-
+		//10 Remove Extra Spaces
+		//Input: " Hello World " → Output: "Hello World"
+		String str10 = " Hello World ";
+		int z = 0;
+		String result = "";
+		boolean charFound = false;
+		boolean spaceFound = false;
+		while (true) {
+			try {
+				char ch = str10.charAt(z);
+				if (ch != ' ') {
+					charFound = true;
+					spaceFound = false;
+					result += ch;
+				} else if (charFound && !spaceFound) {
+		            if (str10.charAt(z+1) != ' ') result += ' ';
+		            spaceFound = true;
+		            charFound = false;
+		        }
+				z++;
+			} catch (Exception e) {
+				break;
+			}
+		}		
+		System.out.println(result);
     }
 }
