@@ -71,7 +71,7 @@ public class Day05TwoPointerAndSorting {
 			System.out.print(array3[i]);
 		}
 
-//		//32 Sort 0s, 1s, 2s (Dutch National Flag Algorithm)
+		//32 Sort 0s, 1s, 2s (Dutch National Flag Algorithm)
 		int[] array4 = {2, 0, 1, 2, 1, 0, 0, 2, 1};
 		int low = 0, mid = 0, high = array3.length-1;
 		
@@ -99,7 +99,5 @@ public class Day05TwoPointerAndSorting {
 		for(int i = 0; i < array4.length; i++) {
 			System.out.print(array4[i]);
 		}
-		
-
     }
 }
