@@ -65,5 +65,50 @@ public class Day06SearchingSorting {
 
 		System.out.println("Rotation count = " + rotationCount);
 
+		//36 Rearrange Array in Alternating Positive & Negative Order
+		int[] array3 = {3, -2, -5, 6, -7, 4, 1, -9};
+		int i = 0; //keep the index of negatives after the shifting
+		int j = 0;
+		//Shifting all positives to left and all negatives to right
+		while (j < array3.length) {
+			if (array3[j] >= 0) {
+				int temp = array3[i];
+				array3[i] = array3[j];
+				array3[j] = temp;
+				i++;
+			}
+			j++;
+		}
+		
+		int currentPos = 0;
+		int neg = i;
+		
+		while (currentPos < array3.length && neg < array3.length) {
+			int temp = array3[currentPos];
+			array3[currentPos] = array3[neg];
+			array3[neg] = temp;
+			currentPos += 2;
+			neg++;			
+		}
+		
+		for(int x: array3) {
+			System.out.print(x + ",");
+		}
+
+//		//37 Rearrange Array so that arr[i] = i if possible
+		int[] array4 = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1};
+		int l = array4.length;
+		
+		for (int a = 0; a < l; a++) {
+			while (array4[a] != -1 && array4[a] != a) {
+				int correctIndex = array4[a]; //where this number needs to go
+				int temp = array4[a];
+                array4[a] = array4[correctIndex];
+                array4[correctIndex] = temp;
+			}
+		}
+		for(int x: array4) {
+			System.out.print(x + ",");
+		}
     }
 }
