@@ -73,7 +73,7 @@ public class LinkedListInQueues {
 		        	obj.print_queue();
 		            break;
 		        case 0:
-		            System.out.print("\n Thanks for using the code..amar.career");
+		            System.out.print("\n Thanks for using the code.");
 		            break;
 		        default:
 		            System.out.print("\nWrong Choice given.");
