@@ -29,7 +29,7 @@ public class Day06SearchingSorting {
 		    }
 		}
 
-//		//35 Find the Rotation Count in Rotated Sorted Array
+		//35 Find the Rotation Count in Rotated Sorted Array
 		int[] arr = {4, 5, 6, 1, 2, 3};
 		int n = arr.length;
 

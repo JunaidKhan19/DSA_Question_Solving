@@ -47,6 +47,14 @@ public class Day01BasicUnderstandingofString {
 		}
 		System.out.println("There are " + vowels + " vowels in the string");
 
+		//better approach
+		for (char c : str3.toLowerCase().toCharArray()) {
+			if("aeiou".indexOf(c)!= -1) {
+				vowels++;
+			}
+		}
+		System.out.println("There are " + vowels + " vowels in the string");
+
 		//04 Convert Lowercase to Uppercase (and vice versa)
 		//Input: "JaVa" → Output: "jAvA" (Use ASCII values — 'A' to 'Z' and 'a' to 'z' ranges)
 		String str4 = "JaVa";

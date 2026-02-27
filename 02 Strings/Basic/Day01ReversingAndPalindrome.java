@@ -84,6 +84,9 @@ public class Day01ReversingAndPalindrome {
 		
 		System.out.println(reversedString);
 
+		//9.2  Reverse word order without using '.split()' 
+		//Input: I love java programming -> programming java love I
+
 		//10 Remove Extra Spaces
 		//Input: " Hello World " → Output: "Hello World"
 		String str10 = " Hello World ";
